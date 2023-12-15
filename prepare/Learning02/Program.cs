@@ -21,17 +21,12 @@ class Program
 
         Console.WriteLine();
 
-        Resume myResume = new Resume();
-        myResume._name = "Wilson Houston";
+        Resume resume = new Resume();
 
+        resume._job.Add(job1);
+        resume._job.Add(job2);
 
-
-
-
-        myResume._jobs.Add(job1);
-        myResume._jobs.Add(job2);
-        myResume.Display();
-
+        resume.Display();
 
     }
 }
