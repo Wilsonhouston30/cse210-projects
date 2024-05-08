@@ -10,6 +10,9 @@ class Program
         string gradeP = Console.ReadLine();
         int percent = Convert.ToInt32(gradeP);
 
+
+        // can convert data type in one line, similarly to python 
+
         string letter = "";
 
 
@@ -33,12 +36,7 @@ class Program
         {
             letter = "F";
         }
-
-
         Console.WriteLine($"You have a {letter}");
-
-
-
 
     }
 }
