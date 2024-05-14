@@ -5,6 +5,8 @@ public class Resume
     //initializing the list of Job
 
     public void Display()
+
+    
     {
         Console.WriteLine($"Name: {Name}");
         Console.WriteLine("Job:");
