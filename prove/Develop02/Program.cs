@@ -8,6 +8,7 @@ class Program
     {
         // Visible menu for the user which converts input into an int
         var usermenu = "";
+        string userEntry = "";
         while (usermenu != "5")
         {
             Console.WriteLine("1.Enter Entry");
@@ -23,20 +24,22 @@ class Program
             {
                 Journal entry1 = new Journal();
                 entry1.Promt();
-                string userEntry = Console.ReadLine();
+                entry1.newEntry();
+
+                userEntry = Console.ReadLine();
                 Console.WriteLine();
             }
-            if (usermenu == "2")
+            else if (usermenu == "2")
             {
                 Console.WriteLine("Display");
                 Console.WriteLine();
             }
-            if (usermenu == "3")
+            else if (usermenu == "3")
             {
                 Console.WriteLine("Load");
                 Console.WriteLine();
             }
-            if (usermenu == "4")
+            else if (usermenu == "4")
             {
                 Console.WriteLine("Save");
                 Console.WriteLine();

@@ -1,7 +1,9 @@
 public class Journal
 {
-    List<Entry> entries =  new List<Entry>();
-    List<string> promts = new List<string>()
+    public List<Entry> entries =  new List<Entry>();
+    
+
+    public List<string> promts = new List<string>()
     { 
         "What are some areas of my life where I tend to have a fixed mindset?",
         "What is something silly that always makes me laugh?",
@@ -10,12 +12,23 @@ public class Journal
         "What are some activities or hobbies that help me relax and de-stress?"
     };
 
+    public string e;
+    
+    // calling a promt method that pulls a promt from promts list 
     public void Promt()
     {
         Random randomGen = new Random();
         int randomNum = randomGen.Next(0,4);
         Console.WriteLine(promts[randomNum]);
     }
+    // newEntry method to ask user to enter entry then add to entry list
+    public void newEntry()
+    {
+        Console.Write("Enter Entry: ");
+        string userEntry = Console.ReadLine();
+
+    }
+    
     
 
 
