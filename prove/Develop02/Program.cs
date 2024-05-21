@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Reflection;
 using System.Xml.Schema;
 
 class Program
@@ -7,42 +8,39 @@ class Program
     static void Main(string[] args)
     {
         // Visible menu for the user which converts input into an int
-        var usermenu = "";
-        string userEntry = "";
-        while (usermenu != "5")
+        var userMenu = "";
+        Journal person_1 = new Journal ();
+
+        while (userMenu != "5")
         {
-            Console.WriteLine("1.Enter Entry");
+            Console.WriteLine("1.Add Entry:");
             Console.WriteLine("2.Display");
             Console.WriteLine("3.Load");
             Console.WriteLine("4.Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5.Quit");
             Console.WriteLine();
-            usermenu = Console.ReadLine();
+            userMenu = Console.ReadLine();
             
 
-            if (usermenu == "1")
+            if (userMenu == "1")
+            /// Displays prompt and saves userEntry 
             {
-                Journal entry1 = new Journal();
-                entry1.Promt();
-                entry1.newEntry();
-
-                userEntry = Console.ReadLine();
-                Console.WriteLine();
+                person_1.newEntry();
             }
-            else if (usermenu == "2")
+            else if (userMenu == "2")
+            // Displays current entries and prompts
             {
-                Console.WriteLine("Display");
-                Console.WriteLine();
+                person_1.DisplayEntries();
             }
-            else if (usermenu == "3")
+            else if (userMenu == "3")
+            // Ask user whats the name of the file of journal then displays entries 
             {
-                Console.WriteLine("Load");
-                Console.WriteLine();
+                person_1.LoadEntries();
             }
-            else if (usermenu == "4")
+            else if (userMenu == "4")
+            // ask user of name of file, saves the file under the user input
             {
-                Console.WriteLine("Save");
-                Console.WriteLine();
+                person_1.SaveEntries();
             }
             
 
