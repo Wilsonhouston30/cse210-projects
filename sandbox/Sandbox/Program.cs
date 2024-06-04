@@ -5,7 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Bank bank = new Bank();
+        Person w = new Person();
+        w.SetFirstName("Wilson");
+
+        Console.WriteLine(w.GetFirstName());
         
 
     }
