@@ -5,12 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Person w = new Person();
-        w.SetFirstName("Wilson");
-
-        Console.WriteLine(w.GetFirstName());
-        
-
+        Book HarryPotter = new Book("Harry Potter", "J.K Rowling", "JK1234");
     }
         
 }

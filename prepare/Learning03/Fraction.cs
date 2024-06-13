@@ -1,37 +1,59 @@
-using System.Diagnostics;
-using System.Globalization;
+using System.Dynamic;
 
 public class Fraction
 {
     private int top;
     private int bottom;
 
-    public Fraction()
+    public Fraction( )
     {
-        top = 1;
-        bottom = 1;
+        Top = 1;
+        Bottom = 1;
     }
 
-    public Fraction(int wholeNumber)
+    public Fraction (int top)
     {
-        top  = wholeNumber;
-        bottom = 1;
+        Top = top;
+        Bottom = 1;
     }
 
-    public Fraction (int Top, int Bottom)
+    public Fraction (int top, int bottom)
     {
-        top = Top;
-        bottom = Bottom;
+        Top = top;
+        Bottom = bottom;
+    }
+
+    public int Top 
+    {
+        get {return top;}
+        set {top = value;}
+
+    }
+
+    public int Bottom
+    {
+        get {return bottom;}
+        set 
+        {
+            if (value != 0)
+            {
+                bottom = value;
+            }
+            else 
+            {
+                throw new ArgumentException ("The bottom value doesn't equal 0");
+            }
+        }
     }
 
     public string GetFractionString()
     {
-        string text = $" {top}/{bottom} ";
-        return text;
+        return  $"{top}/{bottom}";
     }
 
-    public double GetDecimalValue()
+    public double GetDecimalForm()
     {
-        return (double)top / (double)bottom;
+        return (double)top / bottom;
     }
+
 }
