@@ -5,7 +5,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Book HarryPotter = new Book("Harry Potter", "J.K Rowling", "JK1234");
+        
+        string script = "Sample scripture, use the scripture";
+        string [] words = script.Split(" ");
+
+        int wordsLength = words.Length;
+
+        Random randomGen = new Random();
+        int randomNum = randomGen.Next(wordsLength);
+
+        
+        Console.WriteLine(words[randomNum]);
     }
         
 }
