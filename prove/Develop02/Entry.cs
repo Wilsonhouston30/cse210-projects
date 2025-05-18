@@ -21,7 +21,6 @@ public class Entry
         Console.WriteLine($"Promt: {_propmt}");
         Console.WriteLine($"Response: {_repponse} - {_date}");
         Console.WriteLine();
-
     }
 
 }

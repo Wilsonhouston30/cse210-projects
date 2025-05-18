@@ -37,11 +37,11 @@ class Program
         }
         else if ( selection == 3) // load journal
         {
-
+            journal1.loadFiles();
         }
         else if (selection == 4) // save journal 
         {
-
+            journal1.SaveEntry();
         }
        }
 
